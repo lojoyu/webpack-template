@@ -1,0 +1,31 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "@zonesoundcreative/create-webpack-app": "bin/create-webpack",
+    "create-webpack-app": "bin/create-webpack"
+  },
+  "devDependencies": {
+    "arg": "^4.1.3",
+    "chalk": "^4.0.0",
+    "esm": "^3.2.25",
+    "execa": "^4.0.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.1.0",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "path": "^0.12.7",
+    "pkg-install": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lojoyu/webpack-template.git"
+  }
+}
