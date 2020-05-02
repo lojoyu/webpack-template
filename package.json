@@ -1,7 +1,7 @@
 {
-  "name": "webpack-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@zonesoundcreative/create-webpack-app",
+  "version": "0.0.1",
+  "description": "a template for creating webpack app",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
