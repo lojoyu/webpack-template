@@ -40,12 +40,22 @@ async function promptForMissingOptions(options) {
             default: false,
         });
     }
+
+    if (!options.runInstall) {
+        questions.push({
+            type: 'confirm',
+            name: 'runInstall',
+            message: 'Install the project dependency?',
+            default: false,
+        });
+    }
    
     const answers = await inquirer.prompt(questions);
     return {
       ...options,
       projectName: options.projectName || answers.projectName,
       git: options.git || answers.git,
+      runInstall: options.runInstall || answers.runInstall
     };
 }
 

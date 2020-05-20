@@ -2,6 +2,8 @@
 
 create a webpack app
 
+(includes jquery, babel, webpack and html-webpack-plugin)
+
 ## USAGE
 
 ```shell
