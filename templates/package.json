@@ -1,12 +1,14 @@
 {
   "name": "my-webpack-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "deploy": "npm run predeploy && ./gh-deploy dist",
+    "predeploy": "npm run build",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --host 0.0.0.0 --config webpack.dev.config.babel.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
