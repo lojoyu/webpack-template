@@ -26,7 +26,7 @@ function parseArgumentsIntoOptions(rawArgs) {
 
 async function promptForMissingOptions(options) {
     const questions = [];
-    console.log(options);
+    //console.log(options);
     if (!options.projectName) {
         questions.push({
             type: 'input',

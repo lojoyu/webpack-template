@@ -1,6 +1,6 @@
 {
   "name": "@zonesoundcreative/create-webpack-app",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "a template for creating webpack app",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,7 @@
     "pkg-install": "^1.0.0"
   },
   "devDependencies": {
-    
     "path": "^0.12.7"
-    
   },
   "repository": {
     "type": "git",
