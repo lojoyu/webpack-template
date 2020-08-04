@@ -1,0 +1,1 @@
+let XXX = require("../dist/index.min.js");

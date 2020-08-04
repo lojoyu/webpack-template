@@ -32,7 +32,7 @@ export async function createProject(options) {
     let dirname = __dirname;
     let dirstr = dirname.substr(dirname.lastIndexOf('/') + 1) + '$',
         fixedurl = dirname.replace(new RegExp(dirstr), '');
-    options.templateDirectory = `${fixedurl}templates`;
+    options.templateDirectory = `${fixedurl}templates/${options.type}`;
     options.targetDirectory = `./${options.projectName}`;
     
     try {

@@ -7,6 +7,7 @@ function parseArgumentsIntoOptions(rawArgs) {
     {
         '--git': Boolean,
         '--install': Boolean,
+        '--type': String,
         '-g': '--git',
         '-i': '--install',
     },
@@ -19,16 +20,27 @@ function parseArgumentsIntoOptions(rawArgs) {
         git: args['--git'] || false,
         projectName: args._[0],
         runInstall: args['--install'] || false,
+        type: args['--type']
     };
 }
 
 async function promptForMissingOptions(options) {
     const questions = [];
+    console.log(options);
     if (!options.projectName) {
         questions.push({
             type: 'input',
             name: 'projectName',
             message: 'Please Enter The Project Name'
+        });
+    }
+
+    if (!options.type) {
+        questions.push({
+            type: 'list',
+            name: 'type',
+            message: 'Which type of project do you want to create?',
+            choices: ['website', 'npm_package']
         });
     }
    
@@ -54,6 +66,7 @@ async function promptForMissingOptions(options) {
     return {
       ...options,
       projectName: options.projectName || answers.projectName,
+      type: options.type || answers.type,
       git: options.git || answers.git,
       runInstall: options.runInstall || answers.runInstall
     };
